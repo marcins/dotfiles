@@ -67,11 +67,16 @@ rb_prompt() {
   fi
 }
 
-directory_name() {
-  echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
+
+function collapse_pwd {
+    echo $(pwd | sed -e "s,^$HOME,~,")
 }
 
-export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
+directory_name() {
+  echo "%{$fg_bold[cyan]%}$(collapse_pwd)%\/%{$reset_color%}"
+}
+
+export PROMPT=$'\n$(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
