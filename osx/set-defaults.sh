@@ -20,7 +20,7 @@ defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 chflags nohidden ~/Library
 
 # Set a really fast key repeat.
-defaults write -g InitialKeyRepeat -int 10
+defaults write -g InitialKeyRepeat -int 15
 defaults write -g KeyRepeat -int 4
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
