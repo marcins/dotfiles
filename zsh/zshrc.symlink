@@ -38,3 +38,5 @@ do
 done
 
 unset config_files
+
+[ -s "/Users/mszczepanski/.nvm/nvm.sh" ] && . "/Users/mszczepanski/.nvm/nvm.sh" # This loads nvm
