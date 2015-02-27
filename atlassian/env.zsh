@@ -1,0 +1,1 @@
+export STASH_JS_KARMA=1
