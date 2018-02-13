@@ -1,0 +1,17 @@
+CoenraadS.bracket-pair-colorizer
+PeterJausovec.vscode-docker
+antonkovalyov.soy
+dbaeumer.vscode-eslint
+djabraham.vscode-yaml-validation
+eamodio.gitlens
+esbenp.prettier-vscode
+fknop.vscode-npm
+flowtype.flow-for-vscode
+freebroccolo.reasonml
+mohsen1.prettify-json
+ms-vscode.azure-account
+ms-vscode.cpptools
+msjsdiag.debugger-for-chrome
+patrys.vscode-code-outline
+streetsidesoftware.code-spell-checker
+timonwong.shellcheck

@@ -14,6 +14,7 @@ brew tap caskroom/versions
 brew install coreutils
 brew install maven
 brew install yarn --without-node
+brew install shellcheck
 
 brew cask install 1password
 brew cask install visual-studio-code
@@ -38,6 +39,16 @@ brew cask install spectacle
 brew cask install aerial
 brew cask install little-snitch
 brew cask install dropbox
+brew cask install dash
+
+brew tap caskroom/fonts
+brew cask install font-fira-code
+
+# VSCode bits
+mkdir -p ~/Library/Application Support/Code/User
+ln -s "$(pwd)/vscode/settings.json" "/Users/${USER}/Library/Application Support/Code/User/settings.json"
+
+while read in; do code --install-extension "$in"; done < vscode/extensions.txt
 
 defaults write NSGlobalDomain AppleInterfaceStyle 'Dark'
 defaults write com.apple.dock autohide -bool true
