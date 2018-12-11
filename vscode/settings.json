@@ -7,10 +7,11 @@
     "editor.fontLigatures": true,
     "window.zoomLevel": 0,
     "cSpell.numSuggestions": 0,
-    "editor.rulers": [100],
+    "editor.rulers": [
+        100
+    ],
     "editor.renderControlCharacters": true,
     "reason.formatOnSave": true,
-    "editor.formatOnSave": true,
     "eslint.autoFixOnSave": true,
     "files.autoSave": "onFocusChange",
     "gitlens.advanced.messages": {
@@ -20,7 +21,19 @@
         "suppressGitVersionWarning": false,
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
-    }
+    },
+    "gitlens.keymap": "chorded",
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "files.associations": {
+        "*.lock": "plaintext"
+    },
+    "gitlens.historyExplorer.enabled": true,
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true
 }

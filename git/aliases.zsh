@@ -28,3 +28,10 @@ alias grbc='git rebase --continue'
 alias grba='git rebase --abort'
 alias gbclean='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias gbgreen="git checkout --no-track -b $1 origin/last-green-master-build"
+
+function work() {
+  local branch="$1"
+  git fetch
+  git branch "${branch}" origin/master
+  git checkout "${branch}"
+}

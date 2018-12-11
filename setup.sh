@@ -7,7 +7,7 @@
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
 brew install zsh
-sudo chsh -s /usr/local/bin/fish $USER
+sudo chsh -s /usr/local/bin/zsh $USER
 
 brew tap caskroom/versions
 
@@ -15,6 +15,9 @@ brew install coreutils
 brew install maven
 brew install yarn --without-node
 brew install shellcheck
+brew install wget
+brew install watchman
+brew install git
 
 brew cask install 1password
 brew cask install visual-studio-code
@@ -44,6 +47,9 @@ brew cask install dash
 brew tap caskroom/fonts
 brew cask install font-fira-code
 
+brew tap atlassian/micros ssh://git@stash.atlassian.com:7997/micros/micros-cli-homebrew-tap.git
+brew install micros-cli
+
 # VSCode bits
 mkdir -p ~/Library/Application Support/Code/User
 ln -s "$(pwd)/vscode/settings.json" "/Users/${USER}/Library/Application Support/Code/User/settings.json"
@@ -63,6 +69,10 @@ defaults write com.apple.dock wvous-tl-modifier -int 0
 # top right screen corner — disable screen saver
 defaults write com.apple.dock wvous-tr-corner -int 6
 defaults write com.apple.dock wvous-tr-modifier -int 0
+
+
+# only put the computer to sleep after 30 minutes on battery
+sudo pmset -b sleep 30
 
 chflags nohidden ~/Library/
 killall Dock
