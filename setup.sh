@@ -11,19 +11,25 @@ sudo chsh -s /usr/local/bin/zsh $USER
 
 brew tap caskroom/versions
 
+
 brew install coreutils
 brew install maven
-brew install yarn --without-node
+brew install mvnvm
+brew install yarn
 brew install shellcheck
 brew install wget
 brew install watchman
 brew install git
+brew install util-linux
+brew install yubico-pam
+brew install terminal-notifier
+brew install jq
 
 brew cask install 1password
 brew cask install visual-studio-code
 brew cask install quicksilver
 brew cask install iterm2
-brew cask install java8
+brew cask install adoptopenjdk8
 brew cask install acorn
 brew cask install carbon-copy-cloner
 brew cask install charles
@@ -43,12 +49,20 @@ brew cask install aerial
 brew cask install little-snitch
 brew cask install dropbox
 brew cask install dash
+brew cask install insomnia
+brew cask install intellij-idea
+brew cask install vlc
 
 brew tap caskroom/fonts
 brew cask install font-fira-code
 
 brew tap atlassian/micros ssh://git@stash.atlassian.com:7997/micros/micros-cli-homebrew-tap.git
+brew tap atlassian/micros-tap ssh://git@stash.atlassian.com:7997/micros/homebrew-tap.git
 brew install micros-cli
+brew install atlas-cli
+
+atlas plugin install -n slauth
+
 
 # VSCode bits
 mkdir -p ~/Library/Application Support/Code/User
@@ -73,6 +87,9 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 
 # only put the computer to sleep after 30 minutes on battery
 sudo pmset -b sleep 30
+
+# disable powernap when connected
+sudo pmset -c powernap 0
 
 chflags nohidden ~/Library/
 killall Dock

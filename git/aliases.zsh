@@ -32,6 +32,8 @@ alias gbgreen="git checkout --no-track -b $1 origin/last-green-master-build"
 function work() {
   local branch="$1"
   git fetch
+  git stash
   git branch "${branch}" origin/master
   git checkout "${branch}"
+  git stash pop
 }
